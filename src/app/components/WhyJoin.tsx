@@ -2,12 +2,16 @@
 
 export default function WhyJoin() {
   return (
-    <section className="bg-white py-12 px-6 text-center rounded-xl shadow-sm mb-12">
+    <section id="why" className="max-w-4xl mx-auto bg-gradient-to-br from-white via-orange-50 to-white border border-orange-100 rounded-2xl shadow p-10 text-center my-20">
+      <span className="block text-2xl mb-3">✨</span>
       <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Become a Member?</h2>
-      <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-        When you become a member of Radha Krishna Temple, you’re not just supporting a sacred space — 
-        you’re joining a spiritual family. Your contributions help us organize divine events, offer spiritual classes 
-        for kids and adults, and maintain the temple as a hub of devotion, culture, and community.
+      <p className="text-gray-700 text-lg leading-loose">
+        You’re not just supporting a sacred space ,<br />
+        <span className="text-orange-600 font-semibold">
+          you’re becoming part of a spiritual family.
+        </span>
+        <br />
+        Your contribution fuels devotion, celebration, and meaningful service to the community.
       </p>
     </section>
   );

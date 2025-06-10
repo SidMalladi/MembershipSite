@@ -1,9 +1,10 @@
+'use client';
+
 import React from 'react';
 import Card from '../components/Card';
 import CTAHero from '../components/CTAHero';
 import WhyJoin from '../components/WhyJoin';
 import PromoSection from '../components/PromoSection';
-import ActionBar from '../components/ActionsBar';
 import FAQAccordion from '../components/FAQAccordion';
 import Terms from '../components/Terms';
 import EnrollForm from '../components/EnrollForm';
@@ -85,16 +86,22 @@ const membershipLevels = [
   },
 ];
 
-const MembershipPage = () => {
+export default function MembershipPage() {
   return (
-    <main className="min-h-screen p-8 bg-gray-50 space-y-16">
+    <main className="min-h-screen bg-[#f8f6f3] text-gray-800">
       <CTAHero />
-      <WhyJoin />
-      <PromoSection />
 
-      <section id="memberships">
-        <h1 className="text-4xl font-bold text-center mb-10">RKT Membership Levels</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section id="why" className="py-12 sm:py-20 px-6">
+        <WhyJoin />
+      </section>
+
+      <section className="py-12 sm:py-20 px-6">
+        <PromoSection />
+      </section>
+
+      <section id="memberships" className="py-12 sm:py-20 bg-[#f1f1ef] px-6">
+        <h2 className="text-4xl font-bold text-center mb-10">RKT Membership Levels</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {membershipLevels.map((data) => (
             <Card
               key={data.level}
@@ -108,12 +115,17 @@ const MembershipPage = () => {
         </div>
       </section>
 
-      <FAQAccordion />
-      <EnrollForm />
-      <ActionBar />
-      <Terms />
+      <section className="py-12 sm:py-20 px-6">
+        <EnrollForm />
+      </section>
+
+      <section className="py-12 sm:py-20 px-6">
+        <FAQAccordion />
+      </section>
+
+      <section className="py-12 sm:py-20 px-6">
+        <Terms />
+      </section>
     </main>
   );
-};
-
-export default MembershipPage;
+}
